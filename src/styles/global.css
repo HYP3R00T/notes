@@ -549,6 +549,26 @@ body[data-focus-mode="true"] .focus-mode-only {
   .prose hr {
     @apply my-0 border-border/80;
   }
+
+  .prose .equation {
+    @apply relative my-8 w-full scroll-mt-28 pr-10;
+  }
+
+  .prose .equation .katex-display {
+    @apply m-0 overflow-x-auto overflow-y-hidden py-2;
+  }
+
+  .prose .equation-number {
+    @apply absolute top-1/2 right-0 m-0 -translate-y-1/2 font-mono text-sm text-foreground-3;
+  }
+
+  .prose .equation-number a {
+    @apply font-normal text-foreground-3 no-underline hover:text-accent-1;
+  }
+
+  .prose .equation-reference {
+    @apply font-mono font-normal whitespace-nowrap no-underline hover:no-underline;
+  }
 }
 
 .dashed-grid-cell {
@@ -587,19 +607,6 @@ body[data-focus-mode="true"] .focus-mode-only {
         transparent 4px,
         transparent 12px);
   }
-}
-
-/* Fix MathJax SVG inline sizing: prevent mjx-container stretching line width */
-mjx-container[jax="SVG"] {
-  display: inline-block;
-  width: auto !important;
-  vertical-align: baseline;
-}
-
-mjx-container[jax="SVG"]>svg {
-  display: inline-block;
-  max-width: none !important;
-  height: auto;
 }
 
 /* Typography Utility Classes */

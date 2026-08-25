@@ -34,6 +34,25 @@ content/
 
 Module pages use the folder name as their slug. Individual notes receive flat URLs with their numeric ordering prefix removed.
 
+### Equation references
+
+Add a label to a display equation when it needs a number and a stable link:
+
+```md
+$$
+F = ma
+\label{eq:newtons-second-law}
+$$
+```
+
+Refer to it from prose with the MDX-safe `\eqref(...)` form:
+
+```md
+Using Equation \eqref(eq:newtons-second-law), we obtain…
+```
+
+Labelled equations are numbered in reading order within each note. Unlabelled display equations and inline mathematics remain unnumbered.
+
 Visit [notes.hyperoot.dev](https://notes.hyperoot.dev) to read the published notes.
 
 ## License
