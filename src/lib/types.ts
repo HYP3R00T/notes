@@ -11,7 +11,9 @@ export interface HeadSEOProps {
   noIndex?: boolean
 }
 
-export type BaseLayoutProps = HeadSEOProps
+export interface BaseLayoutProps extends HeadSEOProps {
+  layout?: "default" | "focused" | "notes"
+}
 
 export interface SiteConfig {
   repo: string
@@ -21,6 +23,7 @@ export interface SiteConfig {
   imageAlt: string
   contentType: "website" | "article"
   twitterHandle: string
+  author: string
   lang: string
 }
 

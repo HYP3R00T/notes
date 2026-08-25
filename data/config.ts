@@ -2,18 +2,18 @@ import placeholder from "@/assets/placeholder.png"
 import type { NavItem, SiteConfig, SocialLink } from "@/lib/types"
 
 export const SITE: SiteConfig = {
-  repo: "https://github.com/HYP3R00T/devcontainer-astro-template",
-  title: "Astro Template",
-  description:
-    "A reusable Astro starter with stronger layout primitives, and a cleaner foundation for content-driven projects.",
+  repo: "https://github.com/HYP3R00T/notes",
+  title: "Notes",
+  description: "Working notes on mathematics, physics, computer science, and the ideas that connect them.",
   image: placeholder,
-  imageAlt: "Preview of the Astro template starter",
+  imageAlt: "Notes on mathematics, physics, and computer science",
   contentType: "website",
   twitterHandle: "@HYP3R00T",
+  author: "Rajesh Das",
   lang: "en",
 }
 
-export const navItems: NavItem[] = [{ href: "/", label: "Home" }]
+export const navItems: NavItem[] = []
 
 export const SOCIAL_LINKS = [
   {

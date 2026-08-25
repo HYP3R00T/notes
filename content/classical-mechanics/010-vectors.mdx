@@ -1,0 +1,60 @@
+---
+title: Vectors and Coordinate Systems
+description: A practical foundation for representing physical quantities in space.
+tags:
+  - vectors
+  - foundations
+created: 2026-08-25
+draft: false
+---
+
+## Why vectors matter
+
+A scalar records magnitude. A vector records both magnitude and direction. Position, velocity, acceleration, force, and momentum are therefore naturally represented as vectors.
+
+In Cartesian coordinates, a three-dimensional vector can be written as
+
+$$
+\mathbf{v} = v_x\mathbf{\hat{i}} + v_y\mathbf{\hat{j}} + v_z\mathbf{\hat{k}}.
+$$
+
+Its magnitude is
+
+$$
+\lVert\mathbf{v}\rVert = \sqrt{v_x^2 + v_y^2 + v_z^2}.
+$$
+
+## Components and direction
+
+For a two-dimensional vector with magnitude $v$ making an angle $\theta$ with the positive $x$-axis,
+
+$$
+v_x = v\cos\theta,
+\qquad
+v_y = v\sin\theta.
+$$
+
+The component form is useful because vector addition becomes ordinary arithmetic:
+
+$$
+\mathbf{a} + \mathbf{b}
+= (a_x+b_x)\mathbf{\hat{i}} + (a_y+b_y)\mathbf{\hat{j}}.
+$$
+
+## A small Python representation
+
+```python
+from math import hypot
+
+def magnitude(x: float, y: float) -> float:
+    """Return the magnitude of a two-dimensional vector."""
+    return hypot(x, y)
+
+print(magnitude(3, 4))  # 5.0
+```
+
+## Questions to carry forward
+
+- How do vector components change when the coordinate system rotates?
+- Why are displacement and distance fundamentally different quantities?
+- How does differentiation act on a vector-valued function of time?
