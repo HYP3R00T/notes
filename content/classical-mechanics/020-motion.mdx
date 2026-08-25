@@ -1,0 +1,57 @@
+---
+title: Motion in One Dimension
+description: Position, displacement, velocity, and acceleration along a straight line.
+tags:
+  - kinematics
+  - motion
+created: 2026-08-25
+draft: false
+---
+
+## Describing position
+
+The position of an object moving along a straight line can be represented by a function $x(t)$. Its displacement between two times is
+
+$$
+\Delta x = x(t_2) - x(t_1)
+$$
+
+Displacement records the net change in position, so it can be positive, negative, or zero even when the object has travelled some distance.
+
+## Velocity and acceleration
+
+Instantaneous velocity is the rate at which position changes:
+
+$$
+v(t) = \frac{dx}{dt}
+$$
+
+Acceleration measures the corresponding rate of change of velocity:
+
+$$
+a(t) = \frac{dv}{dt} = \frac{d^2x}{dt^2}
+$$
+
+For constant acceleration, integrating these relations gives
+
+$$
+v(t) = v_0 + at
+\qquad
+x(t) = x_0 + v_0t + \frac{1}{2}at^2
+$$
+
+## A small numerical example
+
+```python
+def position(t: float, x0: float = 0, v0: float = 4, a: float = 2) -> float:
+    """Position at time t for motion with constant acceleration."""
+    return x0 + v0 * t + 0.5 * a * t**2
+
+print(position(3))  # 21.0
+```
+
+## Questions to carry forward
+
+- What does a negative velocity say about the direction of motion?
+- Can an object have zero velocity and non-zero acceleration?
+- How do the graphs of position, velocity, and acceleration relate?
