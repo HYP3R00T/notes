@@ -1,0 +1,17 @@
+---
+import CodeShowcase from "@/components/homepage/CodeShowcase.astro";
+import FeatureShowcase from "@/components/homepage/FeatureShowcase.astro";
+import HomepageHero from "@/components/homepage/HomepageHero.astro";
+import WorkflowShowcase from "@/components/homepage/WorkflowShowcase.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Astro Template — A clean foundation for the web"
+  description="A considered Astro starter with MDX, React islands, Tailwind CSS, shadcn/ui, and a reproducible development environment."
+>
+  <HomepageHero />
+  <FeatureShowcase />
+  <CodeShowcase />
+  <WorkflowShowcase />
+</BaseLayout>
