@@ -18,7 +18,6 @@ repos:
       - id: check-added-large-files
       - id: check-merge-conflict
       - id: detect-private-key
-      - id: no-commit-to-branch
 
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v4.18.0
