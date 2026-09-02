@@ -62,7 +62,7 @@ modules.sort((left, right) => left.data.title.localeCompare(right.data.title))
               >
                 <a
                   href={`/${getModuleSlug(module)}`}
-                  class="group block min-h-72 px-5 py-10 transition-colors hover:bg-background-1 md:px-10 lg:px-15"
+                  class="group flex h-full min-h-72 flex-col px-5 py-10 transition-colors hover:bg-background-1 md:px-10 lg:px-15"
                 >
                   <div class="flex items-start justify-between gap-6">
                     <p class="font-mono text-xs text-foreground-3">
@@ -78,7 +78,7 @@ modules.sort((left, right) => left.data.title.localeCompare(right.data.title))
                   </h3>
                   {module.data.description && <p class="mt-3 leading-7 text-foreground-2">{module.data.description}</p>}
                   {module.data.tags.length > 0 && (
-                    <ul class="mt-6 flex flex-wrap gap-2" aria-label={`${module.data.title} topics`}>
+                    <ul class="mt-auto flex flex-wrap gap-2 pt-6" aria-label={`${module.data.title} topics`}>
                       {module.data.tags.map((tag) => (
                         <li class="rounded-full border border-border px-3 py-1 font-mono text-xs text-foreground-2">{tag}</li>
                       ))}
